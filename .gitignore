@@ -1,0 +1,15 @@
+*.jar
+*.crc
+*.asv
+dependency-reduced-pom.xml
+Software/MATLAB/doc/helpsearch-v3
+Software/MATLAB/doc/functions
+Software/MATLAB/doc/classes
+Software/MATLAB/doc/GettingStarted.html
+Software/MATLAB/*.bak
+Software/MATLAB/lib
+Software/Java/target
+Software/Java/src/test
+Software/Java/.settings
+Software/Java/.classpath
+Software/Java/.project

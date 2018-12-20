@@ -1,0 +1,48 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+      <link rel="stylesheet" href="https://localhost:31515/static/help/includes/product/css/helpwin.css"><script type="text/javascript" src="https://localhost:31515/static/help/includes/product/scripts/jquery/jquery-latest.js"></script><script type="text/javascript" src="https://localhost:31515/static/help/includes/shared/scripts/helpservices.js"></script><title>parquetread - MATLAB File Help</title>
+   </head>
+   <body>
+      <!--Single-page help-->
+      <table border="0" cellspacing="0" width="100%">
+         <tr class="subheader">
+            <td class="headertitle">parquetread - MATLAB File Help</td>
+            <td class="subheader-right"><a href="matlab:edit parquetread">View code for parquetread</a></td>
+         </tr>
+      </table>
+      <div class="title">parquetread</div>
+      <div class="helptext"><pre><!--helptext -->  Read a Parquet file
+ 
+  DATA = <span class="helptopic">parquetread</span>(FILE, Property, Value,...) Read the Parquet FILE with
+  optional Property, Value pairs defined by the Reader class and return as
+  DATA.
+ 
+  [DATA, READER] = <span class="helptopic">parquetread</span>(...) optional second argument returns the
+  Reader class.
+ 
+  Valid Property, Value pairs are:
+ 
+    'FetchFields', (string array) fields to fetch, empty string returns
+  all fields and is the default.
+ 
+    'ReplaceMissing',(boolean) replace missing values in Parquet file with
+  the MATLAB missing value. Default is false. Also see help on
+  Reader.addMissing
+ 
+    'FileName' (char) the name of the Parquet file to read
+ 
+    'MaxRows', (double) number of rows to read, if &lt; 0 read all rows in file
+ 
+  Example: Read in a Parquet file
+ 
+    data = parquetread('tmp.parquet');
+ 
+  Example: Read in a Parquet file and replace missing values with the
+  missing datatype
+ 
+    data = parquetread('tmp.parquet','ReplaceMissing', true);</pre></div><!--after help --><!--seeAlso--><div class="footerlinktitle">See also</div><div class="footerlink"> <a href="matlab:doc bigdata.parquet.Reader">bigdata.parquet.Reader</a>, <a href="matlab:doc parquetwrite">parquetwrite</a>
+</div>
+   </body>
+</html>

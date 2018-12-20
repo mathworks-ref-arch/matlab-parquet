@@ -1,0 +1,50 @@
+{
+  "_schemaVersion": "1.0.0",
+  "parquetread":
+  {
+     "inputs":
+     [
+        {"name":"File", "kind":"required", "type":["char"], "purpose":"Name of the Parquet file"},
+        {"name":"FetchFields", "kind":"namevalue", "type":["string"], "purpose":"Fields to fetch"},
+        {"name":"MaxRows", "kind":"namevalue", "type":["numeric"], "purpose":"Number of rows to read, if < 0 read all rows in file"},
+        {"name":"ReplaceMissing", "kind":"namevalue", "type":["logical"], "purpose":"Replace missing values in Parquet file with the MATLAB missing datatype"}
+     ]
+  },
+
+  "parquetinfo":
+  {
+     "inputs":
+     [
+        {"name":"File", "kind":"required", "type":["char"], "purpose":"Name of the Parquet file"}
+     ]
+  },
+
+  "parquetwrite":
+  {
+     "inputs":
+     [
+        {"name":"File", "kind":"required", "type":["char"], "purpose":"Name of the Parquet file"},
+        {"name":"Data", "kind":"required", "type":["char"], "purpose":"Data to write"},
+        {"name":"CompressionCodec", "kind":"namevalue", "type":["char", "choices={'SNAPPY','GZIP','LZO','UNCOMPRESSED'}"], "purpose":"The compression codec to use"},
+        {"name":"DictionaryEncoding", "kind":"namevalue", "type":["logical"], "purpose":"Enable/disable dictionary encoding"},
+        {"name":"MaxPaddingSize", "kind":"namevalue", "type":["integer", ">=0"], "purpose":"Max RowGroup padding size"},
+        {"name":"PageSize", "kind":"namevalue", "type":["integer", ">=0"], "purpose":"The page size in bytes"},
+        {"name":"RowGroupSize", "kind":"namevalue", "type":["integer", ">=0"], "purpose":"The RowGroup size in bytes, should be same as HDFS block size"},
+        {"name":"Validation", "kind":"namevalue", "type":["logical"], "purpose":"Validate the file has been written, true is default"},
+        {"name":"WriteMode", "kind":"namevalue", "type":["char", "choices={'CREATE','OVERWRITE'}"], "purpose":" Write mode being used, CREATE is default"},
+        {"name":"WriterVersion", "kind":"namevalue", "type":["char", "choices={'PARQUET_1_0','PARQUET_2_0'}"], "purpose":"Writer version being used, PARQUET_2_0 is default"},
+        {"name":"DeleteCRC", "kind":"namevalue", "type":["logical"], "purpose":"Set to true to delete any generated checksum CRC files, true is the default"},
+        {"name":"AppendData", "kind":"namevalue", "type":["logical"], "purpose":"Append the data being written to current open writer, false is default"},
+        {"name":"AutoGenerateSchema", "kind":"namevalue", "type":["logical"], "purpose":"Auto-generate schema from data, true is the default"}
+     ]
+  },
+
+ "parquettools":
+  {
+     "inputs":
+     [
+        {"name":"Argument", "kind":"required", "type":["char","choices={'cat','head','schema','meta','dump','merge','help'}"], "purpose":"Choose a Parquet tools command"},
+        {"name":"File", "kind":"required", "type":["char"], "purpose":"Name of the Parquet file"}
+     ]
+  }
+}

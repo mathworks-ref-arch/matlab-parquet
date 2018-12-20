@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 MathWorks, Inc.-->
+<demos>
+    <name>MATLAB Interface for Parquet</name>
+    <type>toolbox</type>
+    <icon>HelpIcon.DEMOS</icon>
+    <description></description>
+    <website><a href="https://www.mathworks.com">MathWorks</a></website>
+    
+    <demosection>
+        <label>Parquet Files</label>
+        <demoitem>
+            <label>Writing and Reading Parquet files</label>
+            <type>M-file</type>
+            <source>parquetDemo</source>
+        </demoitem>        
+        <demoitem>
+            <label>Writing</label>
+            <type>M-file</type>
+            <source>writeParquetExamples</source>
+        </demoitem>        
+    </demosection>
+    
+</demos>

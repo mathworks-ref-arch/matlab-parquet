@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<toc version="2.0">
+    <tocitem target="GettingStarted.html">MATLAB Interface for Parquet
+        <tocitem target="functions.html">Functions
+            <tocitem target="functions/parquetread.html">parquetread</tocitem>
+            <tocitem target="functions/parquetwrite.html">parquetwrite</tocitem>
+            <tocitem target="functions/parquetDatastore.html">parquetDatastore</tocitem>
+            <tocitem target="functions/parquetinfo.html">parquetinfo</tocitem>
+            <tocitem target="functions/parquettools.html">parquettools</tocitem>
+        </tocitem>               
+        <tocitem target="classes.html">Classes 
+            <tocitem target="classes/bigdata.parquet.Reader.html">Reader</tocitem>
+            <tocitem target="classes/bigdata.parquet.Writer.html">Writer</tocitem>
+            <tocitem target="classes/bigdata.parquet.ParquetDatastore.html">ParquetDatastore</tocitem>
+        </tocitem>       
+    </tocitem>    
+</toc>
