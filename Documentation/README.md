@@ -40,4 +40,3 @@ implemented.
     - [Classes](Classes.md)
 
 
-![Image of MATLAB](images/mathworkslogo.jpg)

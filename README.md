@@ -30,11 +30,10 @@ a) Java SDK and Maven are installed.
 b) HADOOP_HOME environment variable is set to a Apache™ Hadoop® installation. See instructions [below](#setting-hadoop_home-on-windows) for Microsoft® Windows®.
 
 The links to download these products are provided in the section [3rd party products](#3rd-party-products).
-To set the environment variable run the command below in MATLAB
-```
-setenv('HADOOP_HOME','<path to Apache Hadoop installation>');
-```
-Note that the above command needs to be run everytime MATLAB is restarted. Information on setting environment variables in MATLAB can be found [here](https://www.mathworks.com/help/matlab/ref/setenv.html).
+
+To set the environment variable, please follow rules for your operating system.
+Please note, that this environment variable must be set **prior** to starting MATLAB.
+*Changing the environment variable from within MATLAB will not have the desired effect.*
 
 ### Setting HADOOP_HOME on Windows
 
