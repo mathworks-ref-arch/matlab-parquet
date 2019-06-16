@@ -29,16 +29,17 @@ Download & unzip binaries from Apache Hadoop official [website](https://hadoop.a
 On Windows, a compatible utility version called ```winutils.exe``` can be downloaded from
 [https://github.com/steveloughran/winutils/raw/master/hadoop-2.8.3/bin/winutils.exe](https://github.com/steveloughran/winutils/raw/master/hadoop-2.8.3/bin/winutils.exe).
 After download, we would recommend placing the executable under `<repo_root>\Software\MATLAB\lib\hadoop\bin\winutils.exe`
+
 *Note that you will need to first manually create the `lib\hadoop\bin` folders*
 
 More detailed information on Windows install can be found
 [here](Documentation/Windows.md).
 
 ## Installation
-Installation of the interface requires building the support package (Jar file) and setting the environment variable value for HADOOP_HOME. Before proceeding, ensure that  
-a) Java SDK and Maven are installed.
-b) Clone repository or download + unzip/tar latest sources [release](https://github.com/mathworks-ref-arch/matlab-parquet/releases).
-c) Create/Set HADOOP_HOME environment variable to point to Apache™ Hadoop® installation local folder *(Linux/MacOS)* or to the folder where ```winutils.exe``` executable is located (as suggested/explained below) *(Windows)*
+Installation of the interface requires building the support package (Jar file) and setting the environment variable value for HADOOP_HOME. Before proceeding:
+* Install Java SDK and Maven.
+* Clone repository or download + unzip/tar latest sources [release](https://github.com/mathworks-ref-arch/matlab-parquet/releases).
+* Create/Set HADOOP_HOME environment variable to point to Apache™ Hadoop® installation local folder *(Linux/MacOS)* or to the folder where ```winutils.exe``` executable is located (as suggested/explained below) *(Windows)*
 
 The links to download these products are provided in the section [3rd party products](#3rd-party-products).
 
