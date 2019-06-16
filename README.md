@@ -62,11 +62,6 @@ cd <this_repo>/Software
 install
 ```
 Restart MATLAB, and verify installation:
-Linux/MacOS:
-```matlab
-parquet('verify')
-```
-
 Windows
 ```matlab
 parquetwin('verify')
@@ -74,6 +69,11 @@ parquetwin('verify')
 
 In case of issues, please refer to the following [documentation](Documentation/Windows.md).
 Otherwise, you're good to go.
+
+Linux
+```matlab
+parquettools('meta')
+```
 
 ## Usage
 
