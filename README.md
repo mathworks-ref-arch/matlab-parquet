@@ -19,7 +19,7 @@ The MATLAB interface for Apache Parquet provides for reading and writing of Apac
 For building the JAR file, please make sure the following products are already installed (or install & downlaod from provided links):
 - [Maven](https://maven.apache.org/download.cgi)
 - [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-- Apache Hadoop
+- Apache™ Hadoop®
 
 #### Apache Hadoop installation and configuration
 ##### Linux/MacOS
