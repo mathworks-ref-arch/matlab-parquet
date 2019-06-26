@@ -24,7 +24,7 @@ If everything is OK, you should see the below and can skip the rest of this guid
 The below documents the steps needed to fix any of the above  setup issues.
 
 ## Set HADOOP_HOME
-If you ran ```parquet('verify')``` and got the below message,
+If you ran ```parquetwin('verify')``` and got the below message,
 where *C:\MyFolder\ParquetInstallfolder* is the folder where the
 Parquet code is installed on your machine:
 
@@ -45,7 +45,7 @@ HADOOP_HOME System variable. It should look something like this:
   ![HADOOP_HOME](images/hadoop_home.png)
 
 ## Download winutils
-If you ran ```parquet('verify')``` and got the below message, where
+If you ran ```parquetwin('verify')``` and got the below message, where
 *C:\MyFolder\ParquetInstallfolder* is the folder where the Parquet code is
 installed on your machine:
 
