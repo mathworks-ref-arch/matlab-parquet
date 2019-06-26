@@ -1,18 +1,6 @@
 [//]: #  (Copyright 2017, The MathWorks, Inc.)
 
 # MATLAB Interface *for Apache Parquet*
-
-## Requirements
-### MathWorks Products (http://www.mathworks.com)
-* Requires MATLAB release R2017b or newer
-
-### 3rd Party Products:
-For building the JAR file:
-- [Maven](https://maven.apache.org/download.cgi)
-- [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-- [Apache Hadoop](https://hadoop.apache.org/releases.html)
-
-
 ## Introduction
 [Apache™ Parquet](https://parquet.apache.org/) is a columnar storage format
 available to any project in the Hadoop ecosystem, regardless of the choice of
@@ -23,38 +11,41 @@ The MATLAB interface for Apache Parquet provides for reading and writing of Apac
 * Access to meta data of a Parquet file
 * A MATLAB Datastore for reading Parquet files
 
+## Requirements
+### MathWorks Products (http://www.mathworks.com)
+* Requires MATLAB release R2017b or newer
+
+### 3rd Party Products:
+For building the JAR file, please make sure the following products are already installed (or install & downlaod from provided links):
+- [Maven](https://maven.apache.org/download.cgi)
+- [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+- Apache Hadoop
+
+#### Apache Hadoop installation and configuration
+##### Linux/MacOS
+Download & unzip binaries from Apache Hadoop official [website](https://hadoop.apache.org/releases.html) to a local folder.
+
+##### Microsoft® Windows®
+On Windows, a compatible utility version called ```winutils.exe``` can be downloaded from
+[https://github.com/steveloughran/winutils/raw/master/hadoop-2.8.3/bin/winutils.exe](https://github.com/steveloughran/winutils/raw/master/hadoop-2.8.3/bin/winutils.exe).
+After download, we would recommend placing the executable under `<repo_root>\Software\MATLAB\lib\hadoop\bin\winutils.exe`
+
+*Note that you will need to first manually create the `lib\hadoop\bin` folders*
+
+More detailed information on Windows install can be found
+[here](Documentation/Windows.md).
 
 ## Installation
-Installation of the interface requires building the support package (Jar file) and setting the environment variable value for HADOOP_HOME. Before proceeding, ensure that  
-a) Java SDK and Maven are installed.  
-b) HADOOP_HOME environment variable is set to a Apache™ Hadoop® installation. See instructions [below](#setting-hadoop_home-on-windows) for Microsoft® Windows®.
+Installation of the interface requires building the support package (Jar file) and setting the environment variable value for HADOOP_HOME. Before proceeding:
+* Install Java SDK and Maven.
+* Clone repository or download + unzip/tar latest sources [release](https://github.com/mathworks-ref-arch/matlab-parquet/releases).
+* Create/Set HADOOP_HOME environment variable to point to Apache™ Hadoop® installation local folder *(Linux/MacOS)* or to the folder where ```winutils.exe``` executable is located (as suggested/explained below) *(Windows)*
 
 The links to download these products are provided in the section [3rd party products](#3rd-party-products).
 
 To set the environment variable, please follow rules for your operating system.
 Please note, that this environment variable must be set **prior** to starting MATLAB.
 *Changing the environment variable from within MATLAB will not have the desired effect.*
-
-### Setting HADOOP_HOME on Windows
-
-On Windows, the environment variable **HADOOP_HOME** can point to a compatible utility version called ```winutils.exe```. The exact value of **HADOOP_HOME** to be used
-on Windows can be found by this command:
-```matlab
->> parquetwin('hadoop_home')
-ans =
-    '<repo_root>\Software\MATLAB\lib\hadoop'
-```
-
-This file can be downloaded from
-[https://github.com/steveloughran/winutils/raw/master/hadoop-2.8.3/bin/winutils.exe](https://github.com/steveloughran/winutils/raw/master/hadoop-2.8.3/bin/winutils.exe).
-
-The downloaded file should be placed in
-```matlab
-<repo_root>\Software\MATLAB\lib\hadoop\bin\winutils.exe
-```
-
-More detailed information on Windows install can be found
-[here](Documentation/Windows.md).
 
 ### Build the Jar file
 To install the interface, you must first build the Jar file.
@@ -64,14 +55,25 @@ cd Software/Java
 mvn clean package
 ```
 
-### Install MATLAB package
+### Install & Verify MATLAB package
 Now you can open MATLAB and install the support package.
 ```MATLAB
 cd <this_repo>/Software
 install
 ```
-Restart MATLAB, and you're good to go.
+Restart MATLAB, and verify installation:
+Windows
+```matlab
+parquetwin('verify')
+```
 
+In case of issues, please refer to the following [documentation](Documentation/Windows.md).
+Otherwise, you're good to go.
+
+Linux
+```matlab
+parquettools('meta')
+```
 
 ## Usage
 

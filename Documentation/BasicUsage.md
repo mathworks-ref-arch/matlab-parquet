@@ -140,14 +140,14 @@ parquetinfo('tmp.parquet')
 ans = struct with fields:
     fileMetaData: [1×1 struct]
     blocks: [1×1 struct]
-    ```
+```
 
-    Similarly one could have run:
+Similarly one could have run:
+```matlab
+parquettools('meta','tmp.parquet')
+```
 
-    ```matlab
-    parquettools('meta','tmp.parquet')
-    ```
-    ```
+```
     file:        file:/Users/[username]/Work/mathworks/BigData/Parquet/Software/Source/MATLAB/matlab/html/examples/tmp.parquet
     creator:     parquet-mr version 1.9.0 (build 38262e2c80015d0935dad20f8e18f2d6f9fbd03c)
     extra:       writer.model.name = Group
@@ -183,30 +183,27 @@ ans = struct with fields:
     r9:           DOUBLE GZIP DO:0 FPO:23349 SZ:2911/2977/1.02 VC:366 ENC:PLAIN ST:[min: -11.841238603069216, max: 9.260105926489308, num_nulls: 0]
     r10:          DOUBLE GZIP DO:0 FPO:26260 SZ:2874/2977/1.04 VC:366 ENC:PLAIN ST:[min: -20.670224601210993, max: 1.8262276444731604, num_nulls: 0]
     News:         BINARY GZIP DO:0 FPO:29134 SZ:271/726/2.68 VC:366 ENC:DELTA_BYTE_ARRAY ST:[no stats for this column]
-    ```
+```
 
 ### Reading in a Parquet file
-    Now lets read in the data, and also return the Reader class:
+Now lets read in the data, and also return the Reader class:
+```matlab
+[read_data, reader] = parquetread('tmp.parquet');
+```
+The reader can also support optional *Property/Value* pairs and we can see what they are:
 
-        ```matlab
-        [read_data, reader] = parquetread('tmp.parquet');
-        ```
-        The reader can also support optional *Property/Value* pairs and we can see what they are:
-
-        ```
-        reader =
+```
+reader =
         Reader with properties:
 
         FetchFields: [0×0 string]
         FileName: 'file:///Users/[username]/Work/mathworks/BigData/Parquet/Software/Source/MATLAB/matlab/doc/examples/tmp.parquet'
         MaxRows: 10000000
         ShowJarLoadedMsg: FALSE
-        ```
+```
 
-        We can specify only a subset of fields to fetch from the Parquet file and limit it to a certain number of rows to read as can be seen from the above properties.
-
-        To verify data read in is the same as what we originally started with in MATLAB:
-
+We can specify only a subset of fields to fetch from the Parquet file and limit it to a certain number of rows to read as can be seen from the above properties.
+To verify data read in is the same as what we originally started with in MATLAB:
 ```matlab
 assert(isequaln(read_data, data))
 ```
