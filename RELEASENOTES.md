@@ -1,5 +1,8 @@
 #  MATLAB Interface *for Apache Parquet* - Release Notes
 
+## Release 0.25.1 February 14th 2020
+* Update to license
+
 ## Release 0.25.0 December 20th 2018
 * parquetreader file handle fix
 * Add unit tests

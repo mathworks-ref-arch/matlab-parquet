@@ -11,6 +11,9 @@ The MATLAB interface for Apache Parquet provides for reading and writing of Apac
 * Access to meta data of a Parquet file
 * A MATLAB Datastore for reading Parquet files
 
+For newer MATLAB releases, starting with R2019a, consider using the shipping Parquet support,
+see https://www.mathworks.com/help/releases/R2019b/matlab/parquet-files.html.
+
 ## Requirements
 ### MathWorks Products (http://www.mathworks.com)
 * Requires MATLAB release R2017b or newer
