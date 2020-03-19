@@ -1,5 +1,8 @@
 #  MATLAB Interface *for Apache Parquet* - Release Notes
 
+## Release 0.25.2
+* Update to Security.md
+
 ## Release 0.25.1 February 14th 2020
 * Update to license
 
