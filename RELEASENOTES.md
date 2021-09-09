@@ -1,5 +1,8 @@
 #  MATLAB Interface *for Apache Parquet* - Release Notes
 
+## Release 0.26.0
+* Package discontinued.
+
 ## Release 0.25.2
 * Update to Security.md
 
